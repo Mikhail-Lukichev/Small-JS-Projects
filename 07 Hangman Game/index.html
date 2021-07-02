@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hangman Game</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Hangman game</h1>
+	<p>Find the hidden word - Enter a letter</p>
+	<div class="game-container">
+		<svg class="figure-container" id="figure-container">
+			<line x1="60" y1="20" x2="140" y2="20"></line> 
+			<line x1="60" y1="20" x2="60" y2="280"></line> 
+			<line x1="140" y1="20" x2="140" y2="80"></line> 
+			<line x1="20" y1="280" x2="100" y2="280"></line> 
+
+			<!-- figure parts-->
+			<!-- head -->
+			<circle cx="140" cy="100" r="20" class="figure-part"></circle>
+
+			<!-- neck -->
+			<line x1="140" y1="120" x2="140" y2="140" class="figure-part"></line> 
+			
+			<!-- arms -->
+			<line x1="140" y1="140" x2="100" y2="120" class="figure-part"></line> 
+			<line x1="140" y1="140" x2="180" y2="120" class="figure-part"></line> 
+
+			<!-- body -->
+			<line x1="140" y1="140" x2="140" y2="180" class="figure-part"></line> 
+
+			<!-- legs -->
+			<line x1="140" y1="180" x2="100" y2="220" class="figure-part"></line> 
+			<line x1="140" y1="180" x2="180" y2="220" class="figure-part"></line> 
+		</svg>
+
+		<div class="wrong-letters-container">
+			<div id="wrong-letters">
+			</div>
+		</div>
+
+		<div class="word" id="word">
+			<!-- <div class="letter">R</div>
+			<div class="letter">A</div>
+			<div class="letter">N</div> -->
+		</div>
+	</div>
+
+	<!-- container for final message-->
+	<div class="popup-container" id="popup-container">
+		<div class="popup">
+			<h2 id="final-message">You won</h2>
+			<button id="play-button">Play again</button>
+		</div>
+	</div>
+
+	<!-- notification -->
+
+	<div class="notification-container" id="notification-container">
+		<p>
+			You have already entered this letter
+		</p>
+	</div>
+	
+	
+	<script src="script.js"></script>
+</body>
+</html>
